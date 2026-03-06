@@ -1,20 +1,30 @@
-import React from 'react';
-import { gerbilFont, satoshiFont } from '../utils/font';
-import { FaPhone } from 'react-icons/fa6';
+import { IoCall } from "react-icons/io5";
+import { satoshiFont } from "../utils/font";
 
 const Hero = () => {
-    return (
-        <div className='bg-[#1E1E1E] py-10'>
-            <div className='text-center w-4xl mx-auto'>
-                <h2 className={`${gerbilFont.className} text-[84px] mb-5 text-white`}>Turn your ideas into reality</h2>
-                <p className={`${satoshiFont.className} text-[20px] mb-10 text-white`}>We are  a team of strategies, designers built with React, Typescript, Tailwind CSS and Node.js when you reuse to play things safe.</p>
-                <div className='flex items-center text-white w-45 py-3 rounded-full mx-auto bg-[#7370FF] justify-center gap-5'>
-                    <button className={`${satoshiFont.className}`}>Book your call </button>
-                    <FaPhone className='text-white' />
-                </div>
+  return (
+    <div>
+      <div className="mt-20">
+        <div className="flex justify-center">
+          <div>
+            <p className="text-white text-6xl text-center">
+              Turn your ideas <br /> into reality
+            </p>
+            <p className={`text-white w-3xl font-normal text-center mt-10 ${satoshiFont.className}`}>
+              We are a team of strategists, designers built
+              with React, Typescript, Tailwind CSS, <br /> and Nodjs when you refuse to
+              play things safe.
+            </p>
+            <div className={`flex items-center justify-center ${satoshiFont.className}`}>
+              <button className="py-3 font-bold bg-linear-to-r from-[#9C99FF] to-[#7370FF] text-white px-5 gap-2 rounded-full mt-10 flex items-center">
+                Book your call <IoCall color="white" size={20} />
+              </button>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
