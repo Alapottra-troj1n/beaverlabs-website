@@ -21,13 +21,13 @@ const What_we_do_best = () => {
                 </div>
 
                 {/* Main Two-Column Flex Row */}
-                <div className="w-full max-w-[1000px] h-[700px] flex flex-row gap-5">
+                <div className="w-full max-w-[1100px] h-[750px] flex flex-row gap-5">
 
-                    {/* LEFT COLUMN — SaaS + AI Automation */}
-                    <div className="flex flex-col gap-5 w-1/4">
+                    {/* LEFT COLUMN — SaaS + AI Automation (Flex-Col) */}
+                    <div className="flex flex-col flex-[2] gap-5 h-full">
 
                         {/* SaaS Platforms */}
-                        <div className="flex-1 rounded-[18px] overflow-hidden relative group bg-[#16122d]">
+                        <div className="flex-[3] rounded-[18px] overflow-hidden relative group bg-[#16122d]">
                             <Image
                                 src={imageOne}
                                 alt="SaaS Platforms Dashboard"
@@ -42,7 +42,7 @@ const What_we_do_best = () => {
                         </div>
 
                         {/* AI Automation */}
-                        <div className="flex-1 rounded-[18px] overflow-hidden relative group bg-[#16122d]">
+                        <div className="flex-[3] rounded-[18px] overflow-hidden relative group bg-[#16122d]">
                             <Image
                                 src={imageFive}
                                 alt="AI Automation Interface"
@@ -58,14 +58,14 @@ const What_we_do_best = () => {
 
                     </div>
 
-                    {/* RIGHT COLUMN — Web Applications + Mobile Apps + UI/UX */}
-                    <div className="flex flex-col gap-5 flex-1">
+                    {/* RIGHT COLUMN — Web Apps + Mobile Apps + UI/UX (Flex-Col) */}
+                    <div className="flex flex-col flex-[3.8] gap-5 h-full">
 
                         {/* Top row: Web Applications + Mobile Apps side by side */}
                         <div className="flex flex-row gap-5 flex-[2]">
 
                             {/* Web Applications */}
-                            <div className="flex-[2] rounded-[18px] overflow-hidden relative group bg-[#16122d]">
+                            <div className="flex-[2.5] rounded-[18px] overflow-hidden relative group bg-[#16122d]">
                                 <Image
                                     src={imageTwo}
                                     alt="Web Applications Interface"
@@ -80,12 +80,12 @@ const What_we_do_best = () => {
                             </div>
 
                             {/* Mobile Apps */}
-                            <div className="flex-1 rounded-[18px] overflow-hidden relative group bg-[#16122d]">
+                            <div className="flex-[1.8] rounded-[18px] overflow-hidden relative group bg-[#16122d]">
                                 <Image
                                     src={imageThree}
                                     alt="Mobile Apps Interfaces"
                                     fill
-                                    className="object-cover object-top"
+                                    className="object-cover object-top pt-8"
                                 />
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#261E3F]/90 to-transparent"></div>
                                 <h3 className="absolute bottom-5 left-5 text-white text-lg font-medium tracking-wide z-10">Mobile Apps</h3>
@@ -97,7 +97,7 @@ const What_we_do_best = () => {
                         </div>
 
                         {/* UI/UX Design — bottom of right column */}
-                        <div className="flex-[3] rounded-[18px] overflow-hidden relative group bg-[#16122d] border-[3px] border-[#261E3F]">
+                        <div className="flex-[4] rounded-[18px] overflow-hidden relative group bg-[#16122d] border-[3px] border-[#261E3F]">
                             <Image
                                 src={imageFour}
                                 alt="UI/UX Design Portfolio"
