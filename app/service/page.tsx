@@ -63,10 +63,10 @@ const fadeRight = {
 
 const Service = () => {
     return (
-        <div className="min-h-screen bg-[#1E1E1E]">
+        <div className="min-h-screen bg-[#1E1E1E] overflow-x-hidden">
 
             {/* Hero */}
-            <section className="max-w-7xl mx-auto px-6 md:px-10 xl:px-0 pt-36 pb-20 text-center">
+            <section className="max-w-7xl mx-auto  px-6 md:px-10 xl:px-0 pt-36 pb-20 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
