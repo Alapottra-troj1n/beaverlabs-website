@@ -23,8 +23,8 @@ const Footer = () => {
 
                         <div className="flex flex-col gap-4">
                             <h4 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Explore</h4>
-                            <Link href="#testimonials" className="text-gray-300 text-sm hover:text-white transition-colors">Testimonial</Link>
-                            <Link href="#faq" className="text-gray-300 text-sm hover:text-white transition-colors">FAQ</Link>
+                            <Link href="/#testimonials" className="text-gray-300 text-sm hover:text-white transition-colors">Testimonial</Link>
+                            <Link href="/#faq" className="text-gray-300 text-sm hover:text-white transition-colors">FAQ</Link>
                         </div>
 
                         <div className="flex flex-col gap-4">
