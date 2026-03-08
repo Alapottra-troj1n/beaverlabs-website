@@ -72,7 +72,7 @@ const Service = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
                         Solutions Tailored<br className="hidden md:block" /> for the Next Gen
                     </h1>
                     <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">

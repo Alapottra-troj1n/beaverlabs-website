@@ -48,7 +48,6 @@ const FAQ = () => {
     return (
         <div id="faq">
             <motion.div
-
                 className="py-16 md:py-24 px-6 md:px-12 lg:px-24"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

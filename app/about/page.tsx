@@ -57,7 +57,7 @@ const About = () => {
                     animate="visible"
                     variants={fadeUp(0)}
                 >
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
                         We Build the Future,<br className="hidden md:block" /> One Product at a Time
                     </h1>
                     <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">

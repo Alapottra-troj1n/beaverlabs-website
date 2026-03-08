@@ -109,7 +109,7 @@ const Portfolio = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
                         Our Portfolio
                     </h1>
                     <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
