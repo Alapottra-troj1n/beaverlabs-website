@@ -33,9 +33,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <button className="py-3 md:py-4 px-6 md:px-8 font-bold bg-linear-to-r from-[#9C99FF] to-[#7370FF] text-white gap-2 rounded-full mt-8 md:mt-10 flex items-center hover:opacity-90 transition-opacity">
+            <a href="tel:+09433443" className="py-3 md:py-4 px-6 md:px-8 font-bold bg-linear-to-r from-[#9C99FF] to-[#7370FF] text-white gap-2 rounded-full mt-8 md:mt-10 flex items-center hover:opacity-90 transition-opacity">
               Book your call <IoCall className="text-white w-5 h-5" />
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

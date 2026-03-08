@@ -7,8 +7,13 @@ import imagecode from '../../public/images/showcase/code.png'
 import imageFigma from '../../public/images/showcase/figmaOne.png'
 import imageFigmaTwo from '../../public/images/showcase/figmaTwo.png';
 import imageStatue from '../../public/images/showcase/statue.png'
+import { useRouter } from 'next/navigation';
 
 const Showcase = () => {
+    const router = useRouter()
+    const handleGotoContact = () => {
+        router.push('/contact')
+    }
     return (
         <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-24">
             <div className="max-w-7xl mx-auto flex flex-col items-center">
@@ -74,7 +79,7 @@ const Showcase = () => {
                             </div>
                             <p className="text-gray-400 text-sm mb-8 px-2">Get your website now</p>
 
-                            <button className="bg-[#5c4df1] hover:bg-[#4b3cda] text-white text-sm font-medium py-2.5 px-6 rounded-full w-max mt-auto transition-colors">
+                            <button onClick={handleGotoContact} className="bg-[#5c4df1] hover:bg-[#4b3cda] cursor-pointer text-white text-sm font-medium py-2.5 px-6 rounded-full w-max mt-auto transition-colors">
                                 Get Started
                             </button>
                         </div>

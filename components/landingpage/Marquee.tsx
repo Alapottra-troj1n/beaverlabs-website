@@ -96,7 +96,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 // Main Demo Component
 export function MarqueeDemo() {
     return (
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-16 md:py-24">
+        <div id="testimonials" className="relative flex w-full flex-col items-center justify-center overflow-hidden py-16 md:py-24">
             <motion.div
                 className="text-center mb-12 md:mb-16 max-w-2xl mx-auto px-4"
                 initial={{ opacity: 0, y: 40 }}

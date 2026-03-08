@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+
 import Link from 'next/link';
 import { Youtube, Twitter, Linkedin } from 'lucide-react';
 
@@ -14,21 +16,21 @@ const Footer = () => {
                     <div className="flex flex-wrap gap-16 md:gap-24">
                         <div className="flex flex-col gap-4">
                             <h4 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Quick Links</h4>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">Service</Link>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">How we work</Link>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">About us</Link>
+                            <Link href="/service" className="text-gray-300 text-sm hover:text-white transition-colors">Service</Link>
+                            <Link href="/how-we-work" className="text-gray-300 text-sm hover:text-white transition-colors">How we work</Link>
+                            <Link href="/about" className="text-gray-300 text-sm hover:text-white transition-colors">About us</Link>
                         </div>
 
                         <div className="flex flex-col gap-4">
                             <h4 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Explore</h4>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">Testimonial</Link>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">FAQ</Link>
+                            <Link href="#testimonials" className="text-gray-300 text-sm hover:text-white transition-colors">Testimonial</Link>
+                            <Link href="#faq" className="text-gray-300 text-sm hover:text-white transition-colors">FAQ</Link>
                         </div>
 
                         <div className="flex flex-col gap-4">
                             <h4 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Company</h4>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">About us</Link>
-                            <Link href="#" className="text-gray-300 text-sm hover:text-white transition-colors">Contact us</Link>
+                            <Link href="/about" className="text-gray-300 text-sm hover:text-white transition-colors">About us</Link>
+                            <Link href="/contact" className="text-gray-300 text-sm hover:text-white transition-colors">Contact us</Link>
                         </div>
                     </div>
                 </div>
