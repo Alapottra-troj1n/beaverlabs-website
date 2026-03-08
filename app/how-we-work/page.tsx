@@ -3,13 +3,17 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import discover from '../../public/images/how-we-work/Discovery.jpg'
+import design from '../../public/images/how-we-work/Design.jpg'
+import engineering from '../../public/images/how-we-work/Engineering.jpg'
+import deploy from '../../public/images/how-we-work/Deploy.png'
 
 const steps = [
     {
         id: '01',
         title: 'Discovery & Strategy',
         description: 'Every great product begins with a deep understanding of the problem. We dive into your business goals, target audience, and market landscape to build a roadmap for success.',
-        icon: "/images/line-md_search (2).png",
+        icon: discover,
         details: [
             'Market & Competitor Analysis',
             'Technical Feasibility Study',
@@ -22,7 +26,7 @@ const steps = [
         id: '02',
         title: 'Design & Experience',
         description: 'We believe good design is invisible. We craft intuitive user journeys and stunning interfaces that not only look beautiful but also feel effortless to use.',
-        icon: "/images/leaf.png",
+        icon: design,
         details: [
             'High-Fidelity Wireframes',
             'Interactive Prototypes',
@@ -35,7 +39,7 @@ const steps = [
         id: '03',
         title: 'Development & Engineering',
         description: 'Our engineers turn designs into reality using state-of-the-art tech stacks. We focus on writing clean, scalable code that performs flawlessly across all devices.',
-        icon: "/images/rounded-point.png",
+        icon: engineering,
         details: [
             'Full-Stack Implementation',
             'Performance Optimization',
@@ -48,7 +52,7 @@ const steps = [
         id: '04',
         title: 'Launch & Evolution',
         description: 'Launching is just the beginning. We manage the deployment process and provide ongoing support to ensure your product continues to evolve and grow with your users.',
-        icon: "/images/arrow.png",
+        icon: deploy,
         details: [
             'Deployment Strategy',
             'Post-Launch Monitoring',
@@ -128,19 +132,21 @@ const HowWeWork = () => {
                                     transition={{ duration: 0.8 }}
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    <div className={`relative aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden border border-white/10 bg-gradient-to-br ${step.gradient} flex items-center justify-center p-12 group`}>
-                                        <div className="relative w-32 h-32 md:w-48 md:h-48 group-hover:scale-110 transition-transform duration-700 ease-out">
+                                    <div className={`relative aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden border border-white/10 bg-gradient-to-br ${step.gradient} group shadow-2xl`}>
+                                        <div className="relative w-full h-full group-hover:scale-105 transition-transform duration-1000 ease-out">
                                             <Image
                                                 src={step.icon}
                                                 alt={step.title}
                                                 fill
-                                                className="object-contain filter invert opacity-80"
+                                                className="object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
                                             />
+                                            {/* Subtle overlay to help text readability if needed */}
+                                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-700" />
                                         </div>
                                         {/* Decorative glass card */}
-                                        <div className="absolute bottom-8 left-8 right-8 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                            <p className="text-white text-sm font-semibold mb-1">{step.title} Phase</p>
-                                            <p className="text-gray-400 text-xs">Ensuring precision at every milestone.</p>
+                                        <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 shadow-lg">
+                                            <p className="text-white text-sm font-bold mb-1">{step.title} Phase</p>
+                                            <p className="text-gray-400 text-xs">Precision excellence at every milestone.</p>
                                         </div>
                                     </div>
                                 </motion.div>
