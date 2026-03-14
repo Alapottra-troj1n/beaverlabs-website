@@ -101,14 +101,14 @@ export function MarqueeDemo() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-indigo-50 via-white to-white opacity-70 pointer-events-none" />
 
             <motion.div
-                className="text-center mb-12 md:mb-16 max-w-2xl mx-auto px-4"
+                className="text-center  md:mb-16 max-w-2xl mx-auto px-4"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <h2 className={`${manrope.className} text-4xl md:text-5xl lg:text-[80px] font-bold tracking-[-0.02em] text-white leading-[1.05] mb-8`}>What people are saying</h2>
-                <p className={`${manrope.className} text-lg sm:text-xl md:text-2xl text-white max-w-4xl mx-auto mb-14 leading-relaxed font-medium tracking-[-0.01em]`}>Here what people are saying about our craft and process.</p>
+                <p className={`${manrope.className} text-lg sm:text-xl md:text-2xl text-white max-w-4xl mx-auto mb-12 leading-relaxed font-medium tracking-[-0.01em]`}>Here what people are saying about our craft and process.</p>
             </motion.div>
 
             <div className="relative flex w-full flex-col items-center justify-center overflow-hidden"
