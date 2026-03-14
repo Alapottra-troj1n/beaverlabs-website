@@ -76,7 +76,7 @@ const Navbar = () => {
                     {navItems.map((item, index) => (
                         <div key={index}>
                             <Link
-                                className={`${manrope.className} text-black text-3xl hover:text-[#7370FF] transition-colors`}
+                                className={`${manrope.className} text-white text-3xl hover:text-[#7370FF] transition-colors`}
                                 href={item.path}
                                 onClick={() => setIsOpen(false)}
                             >

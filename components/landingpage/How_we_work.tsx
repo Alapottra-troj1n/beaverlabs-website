@@ -83,9 +83,8 @@ const How_we_work = () => {
                     </p>
                 </motion.div>
 
-                {/* Diagonal Stepped Layout */}
                 {/* Vertical Stepped Layout */}
-                <div className="relative max-w-5xl mx-auto py-10">
+                <div className="relative max-w-5xl mx-auto py-5 md:py-10">
                     {/* Central Vertical Line */}
                     <div className="absolute left-1/2 top-0 bottom-0 w-0.5 border-l-[2.5px] border-dashed border-[#b3c1d6] -translate-x-1/2 hidden md:block" />
 
@@ -93,7 +92,7 @@ const How_we_work = () => {
                         const isEven = index % 2 === 0;
 
                         return (
-                            <div key={index} className={`relative flex flex-col md:flex-row w-full mb-12 lg:mb-16 ${isEven ? 'justify-start' : 'justify-end'}`}>
+                            <div key={index} className={`relative flex flex-col md:flex-row w-full mb-6 md:mb-12 lg:mb-16 ${isEven ? 'justify-start' : 'justify-end'}`}>
 
                                 {/* Item Container */}
                                 <div className={`w-full lg:w-1/2 flex ${isEven ? 'lg:pr-20 justify-end' : 'lg:pl-20 justify-start'} relative`}>
@@ -104,7 +103,7 @@ const How_we_work = () => {
 
                                     {/* Card */}
                                     <motion.div
-                                        className="w-full max-w-115 bg-white rounded-[20px] shadow-[0_4px_40px_rgba(0,0,0,0.06)] p-8 lg:p-10 relative z-10 border border-slate-100/50"
+                                        className="w-full max-w-115 bg-white rounded-[20px] shadow-[0_4px_40px_rgba(0,0,0,0.06)] p-6 md:p-8 lg:p-10 relative z-10 border border-slate-100/50"
                                         initial={{ opacity: 0, x: isEven ? -40 : 40, y: 15 }}
                                         whileInView={{ opacity: 1, x: 0, y: 0 }}
                                         transition={{ duration: 0.6, delay: 0.1 }}

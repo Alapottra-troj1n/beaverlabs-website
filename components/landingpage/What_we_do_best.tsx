@@ -37,7 +37,7 @@ const What_we_do_best = () => {
 
                 {/* Header */}
                 <motion.div
-                    className="text-center max-w-4xl mb-8 md:mb-16"
+                    className="hidden md:block text-center max-w-4xl mb-8 md:mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
@@ -54,8 +54,8 @@ const What_we_do_best = () => {
                 <div className="flex flex-col gap-4 w-full lg:hidden">
                     {[
                         { src: imageOne, alt: 'SaaS Platforms Dashboard', label: 'SaaS Platforms', h: 'h-[260px] sm:h-[320px]', fit: 'object-left-top' },
-                        { src: imageFive, alt: 'AI Automation Interface', label: 'AI Automation', h: 'h-[260px] sm:h-[320px]', fit: 'object-top' },
-                        { src: webTwo, alt: 'Web Applications Interface', label: 'Web Applications', h: 'h-[260px] sm:h-[320px]', fit: 'object-top' },
+                        { src: imageFive, alt: 'AI Automation Interface', label: 'AI Automation', h: 'h-[260px] sm:h-[320px]', fit: 'object-top w-[100vw] scale-110 lg:scale-105 transition-transform duration-700' },
+                        { src: webTwo, alt: 'Web Applications Interface', label: 'Web Applications', h: 'h-[260px] sm:h-[320px]', fit: 'object-center w-[100vw] scale-150 lg:scale-[1.3] transition-transform duration-700' },
                         { src: mobile, alt: 'Mobile Apps Interfaces', label: 'Mobile Apps', h: 'h-[260px] sm:h-[320px]', fit: 'object-top' },
                         { src: ux, alt: 'UI/UX Design Portfolio', label: 'UI/UX Design', h: 'h-[300px] sm:h-[360px]', fit: 'object-center' },
                     ].map((card, i) => (
@@ -70,7 +70,7 @@ const What_we_do_best = () => {
                         >
                             <Image src={card.src} alt={card.alt} fill className={`object-cover ${card.fit}`} />
 
-                            <h3 className="absolute bottom-5 left-5 text-white text-lg font-medium tracking-wide z-10">{card.label}</h3>
+                            {/* <h3 className="absolute bottom-5 left-5 text-white text-lg font-medium tracking-wide z-10">{card.label}</h3> */}
                             <ArrowButton />
                         </motion.div>
                     ))}
