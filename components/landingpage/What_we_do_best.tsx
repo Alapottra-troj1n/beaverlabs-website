@@ -37,14 +37,14 @@ const What_we_do_best = () => {
 
                 {/* Header */}
                 <motion.div
-                    className="hidden md:block text-center max-w-4xl mb-8 md:mb-16"
+                    className=" text-center max-w-4xl mb-8 md:mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                     viewport={{ once: true }}
                 >
                     <h2 className={`${manrope.className} text-4xl md:text-5xl lg:text-[80px] font-bold tracking-[-0.02em] text-zinc-900 leading-[1.05] mb-8`}>What we do best</h2>
-                    <p className={`${manrope.className} text-lg sm:text-xl md:text-2xl text-zinc-600 max-w-4xl mx-auto mb-14 leading-relaxed font-medium tracking-[-0.01em]`}>
+                    <p className={`${manrope.className} text-lg sm:text-xl md:text-2xl text-zinc-600 max-w-4xl mx-auto mb-5 md:mb-10 leading-relaxed font-medium tracking-[-0.01em]`}>
                         We are a team of strategists, designers built with React, <br /> Typescript, Tailwind CSS, and Node.js
 
                     </p>
