@@ -9,7 +9,7 @@ import imageThree from '../../public/images/whatwedobest/three.png';
 import imageFour from '../../public/images/whatwedobest/four.png';
 import imageFive from '../../public/images/whatwedobest/five.png';
 import videoThumb from '../../public/images/videos/videoOne.png';
-import { gerbilFont, satoshiFont } from '@/components/utils/font';
+import { manrope } from '@/components/utils/font';
 
 const allProjects = [
     {
@@ -110,10 +110,10 @@ const Portfolio = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h1 className={`${gerbilFont.className} text-4xl md:text-5xl lg:text-7xl font-bold text-zinc-900 tracking-tight leading-[1.1] mb-8`}>
+                    <h1 className={`${manrope.className} text-4xl md:text-5xl lg:text-7xl font-bold text-zinc-900 tracking-tight leading-[1.1] mb-8`}>
                         Our Portfolio
                     </h1>
-                    <p className={`text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed ${satoshiFont.className}`}>
+                    <p className={`text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed ${manrope.className}`}>
                         A curated showcase of projects we have crafted — from SaaS platforms to mobile apps,
                         AI tools, and beautiful UI/UX systems.
                     </p>
@@ -133,7 +133,7 @@ const Portfolio = () => {
                                 className="group bg-white border border-zinc-200 rounded-[2rem] overflow-hidden hover:border-[#7370FF]/40 transition-all duration-700 hover:shadow-2xl hover:shadow-[#7370FF]/5 hover:-translate-y-2 cursor-pointer"
                             >
                                 {/* Image */}
-                                <div className="relative w-full h-[240px] sm:h-[280px] md:h-[300px] overflow-hidden">
+                                <div className="relative w-full h-60 sm:h-70 md:h-80 overflow-hidden">
                                     <Image
                                         src={project.image}
                                         alt={project.name}
@@ -148,10 +148,10 @@ const Portfolio = () => {
 
                                 {/* Card Footer */}
                                 <div className="p-8 md:p-10">
-                                    <h3 className={`${gerbilFont.className} text-zinc-900 text-2xl md:text-3xl font-bold mb-3 group-hover:text-[#7370FF] transition-colors duration-500`}>
+                                    <h3 className={`${manrope.className} text-zinc-900 text-2xl md:text-3xl font-bold mb-3 group-hover:text-[#7370FF] transition-colors duration-500`}>
                                         {project.name}
                                     </h3>
-                                    <p className={`text-zinc-500 text-base leading-relaxed ${satoshiFont.className}`}>
+                                    <p className={`text-zinc-500 text-base leading-relaxed ${manrope.className}`}>
                                         {project.description}
                                     </p>
                                 </div>
@@ -170,7 +170,8 @@ const Portfolio = () => {
                     >
                         <button
                             onClick={handleLoadMore}
-                            className="px-12 py-5 rounded-full bg-gradient-to-r from-[#7370FF] to-[#9C99FF] text-white font-bold text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_20px_40px_rgba(115,112,255,0.3)]"
+                            className={`px-12 py-5 rounded-full bg-linear-to-r from-[#7370FF] to-[#9C99FF] text-white font-bold text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_20px_40px_rgba(115,112,255,0.3)]
+                            ${manrope.className}`}
                         >
                             Explore More Projects
                         </button>

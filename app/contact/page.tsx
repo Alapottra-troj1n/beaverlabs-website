@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { IoMail, IoCall, IoLocation, IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram, IoArrowForward } from "react-icons/io5";
-import { gerbilFont, satoshiFont } from "@/components/utils/font";
+import { manrope } from "@/components/utils/font";
 import Swal from 'sweetalert2';
 
 const Contact = () => {
@@ -48,7 +48,7 @@ const Contact = () => {
                 {/* Hero Section */}
                 <div className="text-center mb-16 md:mb-24">
                     <motion.h1
-                        className={`${gerbilFont.className} text-4xl md:text-5xl lg:text-7xl font-bold text-zinc-900 tracking-tight leading-[1.1] mb-8`}
+                        className={`${manrope.className} text-4xl md:text-5xl lg:text-7xl font-bold text-zinc-900 tracking-tight leading-[1.1] mb-8`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -61,7 +61,7 @@ const Contact = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        Have a project in mind? We'd love to hear from you. Let's create something extraordinary together.
+                        Have a project in mind? We&apos;d love to hear from you. Let&apos;s create something extraordinary together.
                     </motion.p>
                 </div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
                         <div className="space-y-8">
-                            <h2 className={`${gerbilFont.className} text-zinc-900 text-3xl mb-8`}>Contact Information</h2>
+                            <h2 className={`${manrope.className} text-zinc-900 text-3xl mb-8`}>Contact Information</h2>
 
                             <div className="flex items-start gap-6 group">
                                 <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200 group-hover:bg-[#7370FF]/10 group-hover:border-[#7370FF]/30 transition-all duration-500 shadow-sm group-hover:shadow-lg">
@@ -140,7 +140,7 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className={`text-zinc-500 text-sm font-bold ml-1 ${satoshiFont.className}`}>Full Name</label>
+                                    <label className={`text-zinc-500 text-sm font-bold ml-1 ${manrope.className}`}>Full Name</label>
                                     <input
                                         type="text"
                                         name="name"
@@ -152,7 +152,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className={`text-zinc-500 text-sm font-bold ml-1 ${satoshiFont.className}`}>Email Address</label>
+                                    <label className={`text-zinc-500 text-sm font-bold ml-1 ${manrope.className}`}>Email Address</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -166,7 +166,7 @@ const Contact = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className={`text-zinc-500 text-sm font-bold ml-1 ${satoshiFont.className}`}>Subject</label>
+                                <label className={`text-zinc-500 text-sm font-bold ml-1 ${manrope.className}`}>Subject</label>
                                 <input
                                     type="text"
                                     name="subject"
@@ -179,7 +179,7 @@ const Contact = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className={`text-zinc-500 text-sm font-bold ml-1 ${satoshiFont.className}`}>Message</label>
+                                <label className={`text-zinc-500 text-sm font-bold ml-1 ${manrope.className}`}>Message</label>
                                 <textarea
                                     rows={5}
                                     name="message"

@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { gerbilFont, satoshiFont } from '@/components/utils/font';
+import { manrope } from '@/components/utils/font';
 import saas from "../../public/images/services/saas.png";
 import webapp from "../../public/images/services/webappication.jpg";
 import mobile from "../../public/images/services/mobileapp.avif";
@@ -73,10 +73,10 @@ const Service = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h1 className={`${gerbilFont.className} text-4xl md:text-5xl lg:text-7xl font-bold text-zinc-900 tracking-tight leading-[1.1] mb-8`}>
+                    <h1 className={`${manrope.className} text-4xl md:text-5xl lg:text-7xl font-bold text-zinc-900 tracking-tight leading-[1.1] mb-8`}>
                         Solutions Tailored<br className="hidden md:block" /> for the Next Gen
                     </h1>
-                    <p className={`text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed ${satoshiFont.className}`}>
+                    <p className={`text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed ${manrope.className}`}>
                         We are a team of strategists and designers obsessed with craft, building
                         high-performance digital products for the ambitious.
                     </p>
@@ -100,13 +100,13 @@ const Service = () => {
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                <h2 className={`${gerbilFont.className} text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 mb-8 tracking-tight leading-[1.1]`}>
+                                <h2 className={`${manrope.className} text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 mb-8 tracking-tight leading-[1.1]`}>
                                     {service.title}
                                 </h2>
-                                <p className={`text-zinc-500 text-lg lg:text-xl leading-relaxed mb-10 ${satoshiFont.className}`}>
+                                <p className={`text-zinc-500 text-lg lg:text-xl leading-relaxed mb-10 ${manrope.className}`}>
                                     {service.description}
                                 </p>
-                                <button className="inline-flex items-center gap-3 bg-gradient-to-r from-[#7370FF] to-[#9C99FF] hover:scale-105 active:scale-95 text-white font-bold px-9 py-4 rounded-full transition-all duration-300 shadow-xl shadow-[#7370FF]/25">
+                                <button className="inline-flex items-center gap-3 bg-linear-to-r from-[#7370FF] to-[#9C99FF] hover:scale-105 active:scale-95 text-white font-bold px-9 py-4 rounded-full transition-all duration-300 shadow-xl shadow-[#7370FF]/25">
                                     Learn More
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -122,7 +122,7 @@ const Service = () => {
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                <div className="relative w-full h-[300px] sm:h-[360px] md:h-[400px] lg:h-[480px] rounded-[3rem] overflow-hidden border border-zinc-200 shadow-2xl shadow-[#7370FF]/5 group">
+                                <div className="relative w-full h-75 sm:h-90 md:h-100 lg:h-120 rounded-[3rem] overflow-hidden border border-zinc-200 shadow-2xl shadow-[#7370FF]/5 group">
                                     <Image
                                         src={service.image}
                                         alt={service.imageAlt}
@@ -130,7 +130,7 @@ const Service = () => {
                                         className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                     />
                                     {/* Subtle purple overlay on hover */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-[#7370FF]/0 via-transparent to-black/20 group-hover:from-[#7370FF]/10 transition-all duration-700" />
+                                    <div className="absolute inset-0 bg-linear-to-br from-[#7370FF]/0 via-transparent to-black/20 group-hover:from-[#7370FF]/10 transition-all duration-700" />
                                 </div>
                             </motion.div>
                         </div>
