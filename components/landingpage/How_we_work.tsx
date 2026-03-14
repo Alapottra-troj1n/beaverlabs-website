@@ -58,7 +58,7 @@ const How_we_work = () => {
             <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full max-w-7xl">
                 {/* Header Section */}
                 <motion.div
-                    className="text-center mb-20 lg:mb-28 max-w-4xl mx-auto"
+                    className="text-center mb-15 lg:mb-28 max-w-4xl mx-auto"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -77,14 +77,14 @@ const How_we_work = () => {
                     <h2 className={`${manrope.className} text-4xl md:text-5xl lg:text-[80px] font-bold tracking-[-0.02em] text-white leading-[1.05] mb-8`}>
                         How we work
                     </h2>
-                    <p className={`${manrope.className} text-lg sm:text-xl md:text-2xl text-white max-w-4xl mx-auto mb-14 leading-relaxed font-medium tracking-[-0.01em]`}>
+                    <p className={`${manrope.className} text-lg sm:text-xl md:text-2xl text-white max-w-4xl mx-auto  leading-relaxed font-medium tracking-[-0.01em]`}>
                         A structured, transparent, and efficient journey from the first concept
                         to a world-class production release.
                     </p>
                 </motion.div>
 
                 {/* Vertical Stepped Layout */}
-                <div className="relative max-w-5xl mx-auto py-5 md:py-10">
+                <div className="relative max-w-5xl mx-auto   md:py-10">
                     {/* Central Vertical Line */}
                     <div className="absolute left-1/2 top-0 bottom-0 w-0.5 border-l-[2.5px] border-dashed border-[#b3c1d6] -translate-x-1/2 hidden md:block" />
 
