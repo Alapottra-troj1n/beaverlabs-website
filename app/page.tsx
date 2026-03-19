@@ -32,7 +32,7 @@ const services = [
         id: '03',
         title: 'RAG & Generative AI',
         description:
-            'Production-grade AI products powered by LLMs and retrieval-augmented generation — built to deliver accurate, grounded answers at scale.',
+            'Production-grade AI products powered by LLMs and retrieval-augmented generation, built to deliver accurate, grounded answers at scale.',
         tags: ['LLMs', 'RAG', 'Vector DBs', 'Embeddings', 'OpenAI'],
         span: 'lg:col-span-1',
         dark: true,
@@ -50,7 +50,7 @@ const services = [
         id: '05',
         title: 'Business Automation',
         description:
-            'End-to-end automation of repetitive workflows, data processing, and business operations — saving your team hours every single day.',
+            'End-to-end automation of repetitive workflows, data processing, and business operations, saving your team hours every single day.',
         tags: ['n8n', 'Zapier', 'Custom Pipelines', 'Webhooks'],
         span: 'lg:col-span-1',
         dark: false,
@@ -69,7 +69,7 @@ const services = [
         title: 'AWS Infrastructure & Data Pipelines',
         description:
             'Scalable cloud architecture, CI/CD pipelines, and data engineering built to carry your product from MVP to enterprise without missing a beat.',
-        tags: ['AWS', 'Terraform', 'Data Pipelines', 'DevOps', 'Docker'],
+        tags: ['AWS', 'Redshift', 'Glue', 'Lambda', 'RDS', 'S3', 'Fargate'],
         span: 'lg:col-span-2',
         dark: false,
     },
@@ -80,7 +80,7 @@ const differentiators = [
         number: '01',
         title: 'Ship in Weeks, Not Months',
         description:
-            'Our agile process means you get a working product fast. No bloated ceremonies, no endless back-and-forth — just focused execution.',
+            'Our agile process means you get a working product fast. No bloated ceremonies, no endless back-and-forth. Just focused execution.',
     },
     {
         number: '02',
@@ -92,7 +92,7 @@ const differentiators = [
         number: '03',
         title: 'AI-Native by Default',
         description:
-            "Every product we build is designed with AI in mind. We don't bolt on intelligence after the fact — we architect it in from day one.",
+            "Every product we build is designed with AI in mind. We don't bolt on intelligence after the fact. We architect it in from day one.",
     },
     {
         number: '04',
@@ -104,7 +104,7 @@ const differentiators = [
 
 const testimonials = [
     {
-        quote: "Beaver Labs shipped our entire MVP in 6 weeks. The quality was exceptional — clean code, great design, and they handled everything from design to deployment.",
+        quote: "Beaver Labs shipped our entire MVP in 6 weeks. The quality was exceptional: clean code, great design, and they handled everything from design to deployment.",
         name: 'Alex Morgan',
         role: 'Founder, Fintech Startup',
         initials: 'AM',
@@ -158,11 +158,11 @@ const faqs = [
     },
     {
         q: 'Can you integrate AI into our existing product?',
-        a: 'Absolutely. We specialize in retrofitting AI capabilities — RAG systems, agentic workflows, business automation — into existing products and infrastructure without disrupting what\'s already working.',
+        a: 'Absolutely. We specialize in retrofitting AI capabilities (RAG systems, agentic workflows, business automation) into existing products and infrastructure without disrupting what\'s already working.',
     },
     {
         q: 'How do you compare to hiring an in-house team or traditional agency?',
-        a: 'An in-house team takes months to hire and is expensive to maintain. Traditional agencies are slow and process-heavy. We give you a senior, full-stack team that moves at startup speed — for a fraction of the cost.',
+        a: 'An in-house team takes months to hire and is expensive to maintain. Traditional agencies are slow and process-heavy. We give you a senior, full-stack team that moves at startup speed, for a fraction of the cost.',
     },
     {
         q: 'Do you offer ongoing support after launch?',
@@ -172,8 +172,8 @@ const faqs = [
 
 const techStack = [
     'Next.js', 'React', 'TypeScript', 'Node.js', 'AWS', 'LLMs', 'RAG',
-    'LangChain', 'n8n', 'Terraform', 'PostgreSQL', 'React Native', 'Tailwind CSS',
-    'GraphQL', 'Docker', 'OpenAI', 'Pinecone', 'Supabase',
+    'LangChain', 'LangGraph', 'n8n', 'Terraform', 'PostgreSQL', 'React Native', 'Tailwind CSS',
+    'GraphQL', 'OpenAI', 'Pinecone', 'Supabase', 'Anthropic', 'Shadcn UI', 'Python'
 ];
 
 // ── Page ─────────────────────────────────────────────────────────────────────
@@ -205,7 +205,7 @@ export default function Home() {
                     </h1>
 
                     <p className={`text-zinc-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12 ${manrope.className}`}>
-                        From idea to MVP to scale — without the hassle and overhead of slow, traditional teams.
+                        From idea to MVP to scale, without the hassle and overhead of slow, traditional teams.
                         We are a full-stack engineering studio specializing in cutting-edge web, AI, and cloud solutions.
                     </p>
 
@@ -232,12 +232,12 @@ export default function Home() {
             </section>
 
             {/* ── Tech Stack Strip ── */}
-            <div className="border-y border-zinc-100 bg-zinc-50/60 py-4 overflow-hidden">
+            <div className="border-y border-[#7370FF]/15 bg-[#7370FF]/4 py-5 overflow-hidden">
                 <Marquee className="[--duration:35s] [--gap:0rem]" repeat={3}>
                     {techStack.map((tech, i) => (
-                        <span key={i} className={`${manrope.className} text-zinc-400 text-sm font-medium px-6 shrink-0 flex items-center gap-6`}>
+                        <span key={i} className={`${manrope.className} text-zinc-500 text-sm font-semibold px-6 shrink-0 flex items-center gap-6`}>
                             {tech}
-                            <span className="text-[#7370FF]/40 text-lg">·</span>
+                            <span className="text-[#7370FF]/50 text-base">·</span>
                         </span>
                     ))}
                 </Marquee>
@@ -375,7 +375,7 @@ export default function Home() {
                         What clients say
                     </h2>
                     <p className={`text-zinc-500 text-lg md:text-xl max-w-xl mx-auto ${manrope.className}`}>
-                        Teams that trusted us to build — and came back to build more.
+                        Teams that trusted us to build, and came back to build more.
                     </p>
                 </motion.div>
 
@@ -383,7 +383,7 @@ export default function Home() {
                     {testimonials.map((t, index) => (
                         <motion.div
                             key={t.name}
-                            className="bg-white border border-zinc-200 rounded-3xl p-8 flex flex-col justify-between group hover:shadow-xl hover:-translate-y-1 hover:border-[#7370FF]/20 transition-all duration-500 relative overflow-hidden"
+                            className="bg-white border cursor-pointer border-zinc-200 rounded-3xl p-8 flex flex-col justify-between group hover:shadow-xl hover:-translate-y-1 hover:border-[#7370FF]/20 transition-all duration-500 relative overflow-hidden"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.08 }}
@@ -511,7 +511,7 @@ export default function Home() {
                         Ready to build something great?
                     </h2>
                     <p className={`text-zinc-500 text-lg md:text-xl max-w-xl mx-auto mb-12 relative z-10 ${manrope.className}`}>
-                        Tell us about your idea. We&apos;ll scope it, design it, and ship it — faster than you think.
+                        Tell us about your idea. We&apos;ll scope it, design it, and ship it faster than you think.
                     </p>
                     <a
                         href="/contact"

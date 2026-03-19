@@ -53,7 +53,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Book Call Button */}
-                    <div className='hidden md:flex items-center gap-2 bg-[#7370FF] rounded-full px-4 py-2 hover:bg-[#625df5] transition-colors cursor-pointer'>
+                    <div className='hidden md:flex items-center gap-2 bg-[#7370FF] rounded-full px-4 py-3 hover:bg-[#625df5] transition-colors cursor-pointer'>
                         <a href="tel:+09433443" className={`text-white text-sm font-medium ${manrope.className}`}>Book your call</a>
                         <FaPhone className='text-white text-xs' />
                     </div>
