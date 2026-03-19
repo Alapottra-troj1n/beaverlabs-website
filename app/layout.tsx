@@ -6,7 +6,7 @@ import Footer from "@/components/common/Footer";
 import { Roboto } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Beaver Labs",
+  title: "BeaverLabs",
   description: "Beaver Labs — Product Design & Engineering Studio",
 };
 

@@ -10,7 +10,6 @@ const navItems = [
     { label: "Home", path: "/" },
     { label: "Portfolio", path: "/portfolio" },
     { label: "About Us", path: "/about" },
-    { label: "Services", path: "/service" },
     { label: "Contact", path: "/contact" },
 ];
 
@@ -28,9 +27,9 @@ const Navbar = () => {
         <>
             {/* Fixed Navbar */}
             <header
-                className={`fixed top-0 left-0 border-b border-gray-50 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? 'bg-white '
-                    : 'bg-white'
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+                    ? 'bg-white/70 backdrop-blur-md backdrop-saturate-150 border-b border-white/20 shadow-sm'
+                    : 'bg-transparent border-b border-transparent'
                     }`}
             >
                 <div className='flex items-center justify-between py-5 px-6 md:px-10 xl:px-0 max-w-7xl mx-auto'>
@@ -54,9 +53,9 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Book Call Button */}
-                    <div className='hidden md:flex items-center gap-2 bg-[#7370FF] rounded-full px-5 py-3 hover:bg-[#625df5] transition-colors cursor-pointer'>
-                        <a href="tel:+09433443" className={`text-white text-xl ${manrope.className}`}>Book your call</a>
-                        <FaPhone className='text-white' />
+                    <div className='hidden md:flex items-center gap-2 bg-[#7370FF] rounded-full px-4 py-2 hover:bg-[#625df5] transition-colors cursor-pointer'>
+                        <a href="tel:+09433443" className={`text-white text-sm font-medium ${manrope.className}`}>Book your call</a>
+                        <FaPhone className='text-white text-xs' />
                     </div>
 
                     {/* Mobile Menu Toggle */}

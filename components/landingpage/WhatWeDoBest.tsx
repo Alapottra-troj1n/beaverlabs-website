@@ -30,7 +30,7 @@ const ArrowButton = ({ size = 16, className = 'bottom-5 right-5 w-7 h-7' }: { si
 
 
 
-const What_we_do_best = () => {
+const WhatWeDoBest = () => {
     return (
         <section className="w-full py-10 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
             <div className="max-w-7xl mx-auto flex flex-col items-center">
@@ -157,4 +157,4 @@ const What_we_do_best = () => {
     );
 };
 
-export default What_we_do_best;
+export default WhatWeDoBest;

@@ -46,7 +46,7 @@ const workingPrinciple = [
     },
 ];
 
-const How_we_work = () => {
+const HowWeWork = () => {
     return (
         <section className="relative overflow-hidden bg-[#7370FF] rounded-t-[80px] lg:rounded-t-[120px] md:py-16">
             {/* Animated background elements */}
@@ -149,4 +149,4 @@ const How_we_work = () => {
     );
 };
 
-export default How_we_work;
+export default HowWeWork;

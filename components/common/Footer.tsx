@@ -17,7 +17,7 @@ const Footer = () => {
                     <div className="flex flex-wrap gap-16 md:gap-24">
                         <div className="flex flex-col gap-4">
                             <h4 className={`${manrope.className} text-black text-xs font-semibold uppercase tracking-wider mb-2`}>Quick Links</h4>
-                            <Link href="/service" className={`${manrope.className} text-zinc-600 text-sm hover:text-zinc-900 transition-colors`}>Service</Link>
+                            <Link href="/portfolio" className={`${manrope.className} text-zinc-600 text-sm hover:text-zinc-900 transition-colors`}>Portfolio</Link>
                             <Link href="/how-we-work" className={`${manrope.className} text-zinc-600 text-sm hover:text-zinc-900 transition-colors`}>How we work</Link>
                             <Link href="/about" className={`${manrope.className} text-zinc-600 text-sm hover:text-zinc-900 transition-colors`}>About us</Link>
                         </div>
