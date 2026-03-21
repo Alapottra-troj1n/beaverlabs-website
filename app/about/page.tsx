@@ -1,7 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
 import { manrope } from '@/components/utils/font';
-import Footer from '@/components/common/Footer';
 
 const stats = [
     { value: '10+', label: 'Projects Delivered' },
@@ -319,7 +318,6 @@ const About = () => {
             </section>
 
         </div>
-        <Footer />
     );
 };
 

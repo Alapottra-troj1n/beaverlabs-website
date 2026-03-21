@@ -2,6 +2,7 @@ import { gerbilFont } from "@/components/utils/font";
 import "./globals.css";
 import { Metadata } from "next";
 import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 import { Roboto } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${roboto.className} bg-white transition-colors duration-300`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

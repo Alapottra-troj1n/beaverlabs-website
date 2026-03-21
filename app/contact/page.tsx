@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Footer from '@/components/common/Footer';
 import { motion } from 'framer-motion';
 import { IoMail, IoCall, IoLocation, IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram, IoArrowForward, IoCheckmarkCircle, IoTimeOutline, IoChatbubblesOutline } from "react-icons/io5";
 import { manrope } from "@/components/utils/font";
@@ -229,7 +228,6 @@ const Contact = () => {
                 </div>
             </section>
         </div>
-        <Footer />
     );
 };
 
