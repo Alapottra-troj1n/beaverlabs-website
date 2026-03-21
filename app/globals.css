@@ -112,15 +112,13 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    background-image: radial-gradient(circle at 2px 2px,
-        oklch(0.92 0.004 286.32) 1px,
-        transparent 0);
-    background-size: 40px 40px;
   }
+}
 
-  .dark body {
-    background-image: radial-gradient(circle at 2px 2px,
-        oklch(1 0 0 / 5%) 1px,
-        transparent 0);
+@utility hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Footer from '@/components/common/Footer';
 import { manrope } from '@/components/utils/font';
 import discover from '../../public/images/how-we-work/Discovery.jpg'
 import design from '../../public/images/how-we-work/Design.jpg'
@@ -192,6 +193,7 @@ const HowWeWork = () => {
                 </motion.div>
             </section>
         </div>
+        <Footer />
     );
 };
 

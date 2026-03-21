@@ -18,7 +18,12 @@
       "Bash(npx magicui-cli:*)",
       "Bash(ls -la \"d:\\\\Beaver Labs\\\\beaverlabs-website\\\\components\\\\landingpage\"\" 2>/dev/null || echo \"Directory not found or doesn 't exist \")",
       "Bash(npm install:*)",
-      "Bash(pnpm install:*)"
+      "Bash(pnpm install:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//d/Beaver Labs/beaverlabs-website/**)",
+      "Bash(done)",
+      "Bash(grep -n \"^    \\);$\\\\|^}\" \"d:/Beaver Labs/beaverlabs-website/app/projects/page.tsx\")"
     ]
   }
 }

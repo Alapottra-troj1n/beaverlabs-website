@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Footer from '@/components/common/Footer';
 import { manrope } from '@/components/utils/font';
 import { FiArrowUpRight, FiMapPin } from 'react-icons/fi';
 import { Marquee } from '@/components/ui/marquee';
@@ -353,6 +354,7 @@ export default function ProjectsPage() {
     const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
     return (
+        <>
         <div className={`min-h-screen bg-white ${manrope.className}`}>
             {/* ── HERO ── */}
             <section ref={heroRef} className="relative pt-40 pb-20 px-6 md:px-10 xl:px-0 overflow-hidden">
@@ -452,44 +454,9 @@ export default function ProjectsPage() {
             </div>
 
             {/* ── CLOSING STATEMENT ── */}
-            <section className="px-6 md:px-10 xl:px-0 max-w-7xl mx-auto mb-20">
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
-                    className="relative bg-zinc-950 rounded-[2.5rem] px-10 md:px-16 py-16 md:py-20 overflow-hidden"
-                >
-                    {/* Glow */}
-                    <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#7370FF]/20 blur-[100px] rounded-full pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-[#9C99FF]/10 blur-[80px] rounded-full pointer-events-none" />
 
-                    <div className="relative max-w-2xl">
-                        <div className="flex items-center gap-3 mb-6">
-                            <span className="w-2 h-2 rounded-full bg-[#7370FF]" />
-                            <span className="text-[13px] font-semibold tracking-widest uppercase text-[#7370FF]">
-                                Your Turn
-                            </span>
-                        </div>
-                        <h2 className={`${manrope.className} text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.1] mb-5`}>
-                            Your story deserves
-                            <br />
-                            to be told.
-                        </h2>
-                        <p className={`${manrope.className} text-zinc-400 text-lg leading-relaxed mb-10`}>
-                            We&apos;re still writing our story. But if you have something worth building,
-                            we&apos;d love to be part of it.
-                        </p>
-                        <Link
-                            href="/contact"
-                            className={`${manrope.className} inline-flex items-center gap-2.5 bg-[#7370FF] hover:bg-[#625df5] text-white font-bold text-base px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_20px_40px_rgba(115,112,255,0.35)]`}
-                        >
-                            Start a conversation
-                            <FiArrowUpRight size={16} />
-                        </Link>
-                    </div>
-                </motion.div>
-            </section>
         </div>
+        <Footer />
+        </>
     );
 }
