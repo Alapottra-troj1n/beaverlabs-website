@@ -55,14 +55,15 @@ const Navbar = () => {
     return (
         <>
             {/* Fixed Navbar */}
-            <header className={`fixed top-0 left-0 right-0 z-[100] flex justify-center px-4 pointer-events-none transition-all duration-700 ${scrolled ? 'pt-4 md:pt-6' : 'pt-0'}`}>
-                <div 
-                    className={`pointer-events-auto flex items-center justify-between w-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                        scrolled
-                            ? `max-w-[700px] rounded-[2rem] py-2 px-4 md:px-6 shadow-[0_8px_30px_rgba(0,0,0,0.5)] border ${isLightTheme ? 'bg-white/90 backdrop-blur-lg border-zinc-200' : 'bg-[#0a0a0a]/80 backdrop-blur-xl border-white/10'}`
-                            : 'max-w-7xl rounded-none py-3 md:py-4 px-6 md:px-10 xl:px-0 border-transparent bg-transparent'
-                    }`}
-                >
+            <header className={`fixed top-0 left-0 right-0 z-[100] px-4 pointer-events-none transition-all duration-1000 ${scrolled ? 'pt-4 md:pt-6' : 'pt-0'}`}>
+                <div className="max-w-7xl mx-auto w-full flex justify-end">
+                    <div 
+                        className={`pointer-events-auto flex items-center justify-between w-full transition-all duration-1000 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                            scrolled
+                                ? `max-w-[320px] md:max-w-[460px] rounded-[2rem] py-2 px-5 shadow-[0_8px_30px_rgba(0,0,0,0.5)] border ${isLightTheme ? 'bg-white/90 backdrop-blur-lg border-zinc-200' : 'bg-[#0a0a0a]/80 backdrop-blur-xl border-white/10'}`
+                                : 'max-w-7xl rounded-none py-3 md:py-4 px-6 md:px-10 xl:px-0 border-transparent bg-transparent'
+                        }`}
+                    >
                     {/* Logo on the left */}
                     <Link
                         href="/"
@@ -78,6 +79,7 @@ const Navbar = () => {
                             desktopClassName="bg-transparent px-0"
                             mobileClassName="z-50"
                         />
+                    </div>
                     </div>
                 </div>
             </header>
