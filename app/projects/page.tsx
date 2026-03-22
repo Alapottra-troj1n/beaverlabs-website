@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import Footer from '@/components/common/Footer';
 import { manrope } from '@/components/utils/font';
 import { FiArrowUpRight, FiMapPin } from 'react-icons/fi';
 import { Marquee } from '@/components/ui/marquee';
@@ -456,7 +455,6 @@ export default function ProjectsPage() {
             {/* ── CLOSING STATEMENT ── */}
 
         </div>
-        <Footer />
         </>
     );
 }

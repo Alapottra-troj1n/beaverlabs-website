@@ -2,7 +2,6 @@ import { gerbilFont } from "@/components/utils/font";
 import "./globals.css";
 import { Metadata } from "next";
 import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
 import { Roboto } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -21,11 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${roboto.className} bg-white transition-colors duration-300`}>
+    <html className="bg-black" lang="en">
+      <body className={`${roboto.className} bg-white transition-colors duration-300 bg-black `}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
