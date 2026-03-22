@@ -51,14 +51,14 @@ const slideLeft = (delay = 0) => ({
 const RevealText = ({ text, progress, start, end }: { text: string, progress: MotionValue<number>, start: number, end: number }) => {
     const chars = text.split("");
     const step = (end - start) / chars.length;
-    
+
     return (
         <span className="relative inline-block whitespace-pre-wrap">
             {chars.map((char, i) => {
                 const charStart = start + i * step;
                 const charEnd = start + (i + 1) * step;
                 const color = useTransform(progress, [charStart, charEnd], ["rgba(255, 255, 255, 0.85)", "#7370FF"]);
-                
+
                 return (
                     <motion.span key={i} style={{ color }}>
                         {char}
@@ -155,13 +155,13 @@ export default function Home() {
 
     useEffect(() => {
         if (!servicesRef.current && !whyRef.current) return;
-        
+
         const observer = new ResizeObserver((entries) => {
             for (let entry of entries) {
-                const height = entry.borderBoxSize && entry.borderBoxSize.length > 0 
-                    ? entry.borderBoxSize[0].blockSize 
+                const height = entry.borderBoxSize && entry.borderBoxSize.length > 0
+                    ? entry.borderBoxSize[0].blockSize
                     : entry.contentRect.height;
-                    
+
                 if (entry.target === servicesRef.current) {
                     setServicesHeight(height);
                 } else if (entry.target === whyRef.current) {
@@ -172,7 +172,7 @@ export default function Home() {
 
         if (servicesRef.current) observer.observe(servicesRef.current);
         if (whyRef.current) observer.observe(whyRef.current);
-        
+
         return () => observer.disconnect();
     }, []);
 
@@ -184,7 +184,7 @@ export default function Home() {
             ════════════════════════════════════════════════ */}
             <section
                 id="hero"
-                className="sticky top-0 z-0 min-h-screen bg-zinc-950 flex items-center overflow-hidden"
+                className="sticky top-0 z-0 min-h-[100svh] bg-zinc-950 flex items-center overflow-hidden"
             >
                 {/* Ambient glows */}
                 <div className="absolute top-1/3 left-1/4 w-[500px] h-[400px] bg-[#7370FF]/12 blur-[130px] rounded-full pointer-events-none" />
@@ -202,7 +202,7 @@ export default function Home() {
                         >
                             <span className="w-2 h-2 rounded-full bg-[#7370FF] animate-pulse" />
                             <span className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#7370FF]">
-                                Beaver Labs · <span className='text-white'>Product Design & Engineering Studio</span>
+                                Product Design  <span className='text-white'> & Engineering Studio</span>
                             </span>
                         </motion.div>
 
@@ -262,8 +262,8 @@ export default function Home() {
                         >
                             {[
                                 { num: '100+', label: 'Projects' },
-                                { num: '5', label: 'Continents' },
-                                { num: '5+', label: 'Industries' },
+                                { num: '30K+', label: 'Users' },
+                                { num: '5+', label: 'Countries' },
                             ].map((stat) => (
                                 <div
                                     key={stat.label}
@@ -281,14 +281,16 @@ export default function Home() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 0.61, 0.36, 1] }}
-                        className="absolute inset-0 md:relative md:inset-auto h-[100vh] md:h-[580px] w-full z-0 md:z-auto pointer-events-none md:pointer-events-auto flex items-center justify-center overflow-hidden md:overflow-visible"
+                        className="absolute inset-0 md:relative md:inset-auto h-[100svh] md:h-[580px] w-full z-0 md:z-auto pointer-events-none md:pointer-events-auto flex items-center justify-center overflow-hidden md:overflow-visible"
                     >
-                        <div className="w-full h-full opacity-25 md:opacity-100 scale-150 md:scale-100 transition-opacity duration-1000 mt-20 md:mt-0">
+                        <div className="w-full h-full opacity-25 md:opacity-100 scale-150 md:scale-100 transition-opacity duration-1000 mt-20 md:mt-0 relative">
                             <Spotlight size={550} />
                             <SplineScene
                                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                                 className="w-full h-full"
                             />
+                            {/* Mobile Overlay to keep text readable */}
+                            <div className="absolute inset-0 bg-zinc-950/50 md:hidden pointer-events-none z-10" />
                         </div>
                     </motion.div>
                 </div>
@@ -315,8 +317,8 @@ export default function Home() {
             <section
                 id="why"
                 ref={whyRef}
-                className="sticky z-10 min-h-screen bg-zinc-950 rounded-t-[2.5rem] overflow-hidden shadow-[0_-8px_40px_rgba(0,0,0,0.6)] flex items-center"
-                style={{ top: whyHeight > 0 ? `min(0px, calc(100vh - ${whyHeight}px))` : '0px' }}
+                className="sticky z-10 min-h-[100svh] bg-zinc-950 rounded-t-[2.5rem] overflow-hidden shadow-[0_-8px_40px_rgba(0,0,0,0.6)] flex items-center"
+                style={{ top: whyHeight > 0 ? `min(0px, calc(100svh - ${whyHeight}px))` : '0px' }}
             >
                 {/* Ambient glow */}
                 <div className="absolute top-1/2 left-1/3 w-[600px] h-[400px] bg-[#7370FF]/10 blur-[150px] rounded-full pointer-events-none -translate-y-1/2" />
@@ -350,8 +352,8 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Scroll animation spacer to hold `#why` in place for 200vh */}
-            <div ref={spacerRef} className="h-[200vh] w-full" />
+            {/* Scroll animation spacer to hold `#why` in place for 200svh */}
+            <div ref={spacerRef} className="h-[200svh] w-full" />
 
             {/* ════════════════════════════════════════════════
                 03 · SERVICES — sticky layer z-20
@@ -360,7 +362,7 @@ export default function Home() {
                 id="services"
                 ref={servicesRef}
                 className="sticky z-20 bg-[#0a0a0f] rounded-t-[2.5rem] overflow-hidden shadow-[0_-8px_40px_rgba(0,0,0,0.4)]"
-                style={{ top: servicesHeight > 0 ? `min(0px, calc(100vh - ${servicesHeight}px))` : 'min(0px, calc(100vh - 100%))' }}
+                style={{ top: servicesHeight > 0 ? `min(0px, calc(100svh - ${servicesHeight}px))` : 'min(0px, calc(100svh - 100%))' }}
             >
                 {/* Ambient glow */}
                 <div className="absolute top-0 right-1/4 w-[500px] h-[300px] bg-[#7370FF]/6 blur-[130px] rounded-full pointer-events-none" />
@@ -459,7 +461,7 @@ export default function Home() {
             ════════════════════════════════════════════════ */}
             <section
                 id="contact"
-                className="sticky top-0 z-50 min-h-screen bg-zinc-950 rounded-t-[2.5rem] overflow-hidden shadow-[0_-8px_60px_rgba(0,0,0,0.7)] flex items-center justify-center"
+                className="sticky top-0 z-50 min-h-[100svh] bg-zinc-950 rounded-t-[2.5rem] overflow-hidden shadow-[0_-8px_60px_rgba(0,0,0,0.7)] flex items-center justify-center"
             >
                 {/* Large ambient glow */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#7370FF]/14 blur-[160px] rounded-full pointer-events-none" />
@@ -485,7 +487,7 @@ export default function Home() {
                         </span>
                         <h2 className="text-[clamp(2.5rem,7vw,6.5rem)] font-extrabold text-white tracking-[-0.03em] leading-[1.02] mb-8 max-w-4xl mx-auto">
                             Ready to Build
-                            <br  />
+                            <br />
                             <span className="text-[#7370FF] pt-24 ">Something Real?</span>
                         </h2>
                         <p className="text-zinc-500 text-lg max-w-sm mx-auto leading-relaxed mb-14">
