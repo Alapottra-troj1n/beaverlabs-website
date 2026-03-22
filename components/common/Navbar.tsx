@@ -72,7 +72,7 @@ const Navbar = () => {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-8 ">
                         {navItems.map((item, index) => (
                             <Link
                                 key={index}
@@ -89,7 +89,7 @@ const Navbar = () => {
                         <div className="flex items-center gap-2 bg-[#7370FF] rounded-full px-4 py-3 hover:bg-[#625df5] transition-colors cursor-pointer">
                             <a
                                 href="mailto:hello@beaverlabs.com"
-                                className={`text-white text-sm font-medium ${manrope.className}`}
+                                className={`text-white text-sm font-bold ${manrope.className}`}
                             >
                                 Book your call
                             </a>
@@ -177,7 +177,7 @@ const Navbar = () => {
                                 onClick={() => setIsOpen(false)}
                                 className="flex items-center gap-2 bg-[#7370FF] hover:bg-[#625df5] active:scale-[0.98] text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 text-sm"
                             >
-                                <FaPhone className="text-xs" />
+                                <FaPhone className="text-xs font-bold" />
                                 Book your call
                             </a>
                             <p className="text-zinc-600 text-xs">hello@beaverlabs.com</p>

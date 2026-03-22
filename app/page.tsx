@@ -50,10 +50,10 @@ const slideLeft = (delay = 0) => ({
 
 /* ─── Data ─── */
 const manifestoLines = [
-    { text: 'You talk to the people building your product.', delay: 0 },
-    { text: 'Small enough to care. Sharp enough to deliver.', delay: 0.12 },
-    { text: 'We ship in weeks, not quarters.', delay: 0.24 },
-    { text: "Your project isn't lost in a queue.", delay: 0.36 },
+    { text: 'From idea to MVP in weeks, not quarters.', delay: 0 },
+    { text: 'No bloat. No overhead. Just delivery.', delay: 0.12 },
+    { text: 'Full-stack capability at startup speed.', delay: 0.24 },
+    { text: 'Your vision, our execution. On demand.', delay: 0.36 },
 ];
 
 const servicesData = [
@@ -176,7 +176,7 @@ export default function Home() {
                         >
                             <span className="w-2 h-2 rounded-full bg-[#7370FF] animate-pulse" />
                             <span className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#7370FF]">
-                                Beaver Labs · <span className='text-white'>Product Engineering Studio</span>
+                                Beaver Labs · <span className='text-white'>Product Design & Engineering Studio</span>
                             </span>
                         </motion.div>
 
@@ -186,12 +186,12 @@ export default function Home() {
                             animate="visible"
                             className="text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold text-white tracking-[-0.03em] leading-[1.0] mb-6"
                         >
-                            {"We're a small"}
+                            {"Your Agile"}
                             <br />
-                            {"studio. "}
-                            <span className="text-[#7370FF]">{"That's"}</span>
+                            {"Tech Team, "}
+                            <span className="text-[#7370FF]">{"On"}</span>
                             <br />
-                            <span className="text-[#7370FF]">{"the point."}</span>
+                            <span className="text-[#7370FF]">{"Demand."}</span>
                         </motion.h1>
 
                         <motion.p
@@ -200,8 +200,8 @@ export default function Home() {
                             animate="visible"
                             className="text-zinc-400 text-base md:text-lg max-w-md leading-relaxed mb-10"
                         >
-                            Agile, modern software from a team that treats your project like it's their only one.
-                            Because for the time we're working together, it is.
+                            From idea to MVP to scale, without the hassle and overhead of slow, traditional teams.
+                            We are a full-stack engineering studio specializing in cutting-edge web, AI, and cloud solutions.
                         </motion.p>
 
                         {/* CTAs */}
@@ -302,7 +302,7 @@ export default function Home() {
                         className="mb-16"
                     >
                         <span className="text-[#7370FF] text-[11px] font-bold tracking-[0.22em] uppercase">
-                            Why small wins
+                            Why on demand
                         </span>
                     </motion.div>
 
@@ -351,7 +351,7 @@ export default function Home() {
                         className="flex flex-col items-center text-center mb-16 md:mb-24 relative z-10"
                     >
                         <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold text-white tracking-[-0.02em] leading-tight mb-5">
-                            What we build
+                            What we <span>build</span>
                         </h2>
                         <p className="text-zinc-400 text-lg md:text-xl max-w-2xl">
                             End-to-end capabilities across product, AI, and infrastructure.
